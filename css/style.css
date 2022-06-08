@@ -1,6 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .error {
     color: crimson;
     font-weight: bold;
+    max-width: 17rem;
 }
 
 input.error {
@@ -8,9 +14,13 @@ input.error {
     color: black;
     font-weight: normal;
 }
+input:focus {
+   outline: none;
+     border: 1px solid #555;
+}
 header h1 {
     color: #2929a3;
-    font-size: 50px;
+    font-size: 44px;
     text-align: center;
     margin: 3rem 0;
 }
@@ -21,6 +31,8 @@ main {
 form fieldset {
     padding: 2rem;
     border-color: #2929a3;
+    text-align: center;
+
 }
 form fieldset legend {
     color: #1f2652;
@@ -29,9 +41,53 @@ form fieldset legend {
 }
 form div {
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
 }
+form label {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
 form input {
     width: 58%;
     padding: 0.5rem 1rem;
-    margin-left: 1rem;
+}
+form input[type="submit"] {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    color: white;
+    background: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+@media (max-width: 1024px) {
+    main {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 34px;
+    }
+}
+@media (max-width: 600px) {
+    main {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    form input {
+        width: 81%;
+    }
+    header h1 {
+        font-size: 29px;
+    }
+    form fieldset legend {
+        font-size: 1rem;
+    }
+    form input[type="submit"] {
+    width: 80%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    }
 }
