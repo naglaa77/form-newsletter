@@ -1,0 +1,10 @@
+.error {
+    color: crimson;
+    font-weight: bold;
+}
+
+input.error {
+    border-color: crimson;
+    color: black;
+    font-weight: normal;
+}

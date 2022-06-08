@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Abonnement Newsletter</h1>
+    </header>
+    <main>
+        <form action="index.php" method="POST">
+            <fieldset>
+                <legend>Abonnez-vous à notre newsletter pour rester informé</legend>
+                <div>
+                    <label for="firstname" <?=isset($errors['firstname'])?'class="error"':'';?>>Prénom</label>
+                    <input type="text" id="firstname" name="firstname" value="<?=$firstname;?>" <?=isset($errors['firstname'])?'class="error"':'';?>>
+
+                    <!-- Affichage du message d'erreur le cas échéant -->
+                    <?php if (isset($errors['firstname'])) { ?>
+                        <p class="error"><?=$errors['firstname'];?></p>
+                    <?php } ?>
+                </div>
+                <div>
+                    <label for="lastname" <?=isset($errors['lastname'])?'class="error"':'';?>>Nom</label>
+                    <input type="text" id="lastname" name="lastname" value="<?=$lastname;?>" <?=isset($errors['lastname'])?'class="error"':'';?>>
+
+                    <!-- Affichage du message d'erreur le cas échéant -->
+                    <?php if (isset($errors['lastname'])) { ?>
+                        <p class="error"><?=$errors['lastname'];?></p>
+                    <?php } ?>
+                </div>
+                <div>
+                    <label for="email" <?=isset($errors['email'])?'class="error"':'';?>>Email</label>
+                    <input type="text" id="email" name="email" value="<?=$email;?>" <?=isset($errors['email'])?'class="error"':'';?>>
+
+                    <!-- Affichage du message d'erreur le cas échéant -->
+                    <?php if (isset($errors['email'])) { ?>
+                        <p class="error"><?=$errors['email'];?></p>
+                    <?php } ?>
+                </div>
+                <input type="submit" value="Valider">
+            </fieldset>
+        </form>        
+    </main>
+</body>
+</html>
