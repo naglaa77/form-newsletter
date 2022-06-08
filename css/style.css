@@ -8,3 +8,30 @@ input.error {
     color: black;
     font-weight: normal;
 }
+header h1 {
+    color: #2929a3;
+    font-size: 50px;
+    text-align: center;
+    margin: 3rem 0;
+}
+main {
+    width: 39%;
+    margin: 17px auto;
+}
+form fieldset {
+    padding: 2rem;
+    border-color: #2929a3;
+}
+form fieldset legend {
+    color: #1f2652;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+form div {
+    margin-bottom: 1rem;
+}
+form input {
+    width: 58%;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
